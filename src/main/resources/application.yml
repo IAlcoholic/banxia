@@ -1,0 +1,42 @@
+logging:
+  file: my.log
+
+spring:
+  datasource:
+    password: 123456
+    username: root
+    url: jdbc:mysql://localhost:3306/banxia
+    driver-class-name: com.mysql.jdbc.Driver
+  output:
+    ansi:
+      enabled: always
+  aop:
+    auto: true
+    proxy-target-class: false
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  thymeleaf:
+    cache: true
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    encoding: utf-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+    excluded-view-names:
+    template-resolver-order:
+
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+  error:
+    path: /login.jsp
